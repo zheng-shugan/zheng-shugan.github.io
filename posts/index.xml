@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有文章 - Shugan of ideas</title>
+        <link>https://zheng-shugan.github.io/posts/</link>
+        <description>所有文章 | Shugan of ideas</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 11 Feb 2022 02:27:51 &#43;0800</lastBuildDate><atom:link href="https://zheng-shugan.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Hello world</title>
+    <link>https://zheng-shugan.github.io/helloworld/</link>
+    <pubDate>Fri, 11 Feb 2022 02:27:51 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://zheng-shugan.github.io/helloworld/</guid>
+    <description><![CDATA[从高中开始就很想搭建一个自己的博客网站觉得这是一件特别酷的事情：在自己的网站上介绍自己的作品、分享自己产品体验又或是记录自己的碎碎念&hel]]></description>
+</item></channel>
+</rss>
