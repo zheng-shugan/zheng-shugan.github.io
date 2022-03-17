@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>所有文章 - Shugan of ideas</title>
+        <title>所有文章 - quasi&#39;ideas</title>
         <link>https://zheng-shugan.github.io/posts/</link>
-        <description>所有文章 | Shugan of ideas</description>
+        <description>所有文章 | quasi&#39;ideas</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 09 Mar 2022 02:27:51 &#43;0800</lastBuildDate><atom:link href="https://zheng-shugan.github.io/posts/" rel="self" type="application/rss+xml" /><item>
     <title>我听说新 Mac 是造梦引擎？</title>
     <link>https://zheng-shugan.github.io/macbookpro/</link>
     <pubDate>Wed, 09 Mar 2022 02:27:51 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://zheng-shugan.github.io/macbookpro/</guid>
-    <description><![CDATA[MacBook Pro 我自己拥有的第一台电脑苹果第一台搭载自研桌面级处理的 MacBook，2020 年它带着光环而来。搭载全新的 Apple Silicon、10 小时续航、]]></description>
+    <description><![CDATA[我自己拥有的第一台电脑苹果第一台搭载自研桌面级处理的 MacBook，2020 年它带着光环而来。搭载全新的 Apple Silicon、10 小时续航、统一]]></description>
 </item><item>
     <title>Hello world</title>
     <link>https://zheng-shugan.github.io/helloworld/</link>
