@@ -1,17 +1,24 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Shugan of ideas</title>
+        <title>quasi&#39;ideas</title>
         <link>https://zheng-shugan.github.io/</link>
-        <description>这是我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 09 Mar 2022 02:27:51 &#43;0800</lastBuildDate>
+        <description>quasi&#39; of ideas</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 21 Apr 2022 19:46:13 &#43;0800</lastBuildDate>
             <atom:link href="https://zheng-shugan.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>React组件间通信</title>
+    <link>https://zheng-shugan.github.io/react-component-communication/</link>
+    <pubDate>Thu, 21 Apr 2022 19:46:13 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://zheng-shugan.github.io/react-component-communication/</guid>
+    <description><![CDATA[Hi，作为一个初次学习 React 的小白在了解了state和props之后就可以快乐的在父组件中传递数据给子组件，然后在子组件里使用父组件的回调函数去]]></description>
+</item><item>
     <title>我听说新 Mac 是造梦引擎？</title>
     <link>https://zheng-shugan.github.io/macbookpro/</link>
     <pubDate>Wed, 09 Mar 2022 02:27:51 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://zheng-shugan.github.io/macbookpro/</guid>
-    <description><![CDATA[MacBook Pro 我自己拥有的第一台电脑苹果第一台搭载自研桌面级处理的 MacBook，2020 年它带着光环而来。搭载全新的 Apple Silicon、10 小时续航、]]></description>
+    <description><![CDATA[我自己拥有的第一台电脑苹果第一台搭载自研桌面级处理的 MacBook，2020 年它带着光环而来。搭载全新的 Apple Silicon、10 小时续航、统一]]></description>
 </item><item>
     <title>Hello world</title>
     <link>https://zheng-shugan.github.io/helloworld/</link>
