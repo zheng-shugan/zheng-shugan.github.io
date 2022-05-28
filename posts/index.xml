@@ -3,7 +3,14 @@
         <title>所有文章 - quasi&#39;ideas</title>
         <link>https://zheng-shugan.github.io/posts/</link>
         <description>所有文章 | quasi&#39;ideas</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 21 Apr 2022 19:46:13 &#43;0800</lastBuildDate><atom:link href="https://zheng-shugan.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 28 May 2022 17:11:16 &#43;0800</lastBuildDate><atom:link href="https://zheng-shugan.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>五月小记</title>
+    <link>https://zheng-shugan.github.io/2022maynote/</link>
+    <pubDate>Sat, 28 May 2022 17:11:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://zheng-shugan.github.io/2022maynote/</guid>
+    <description><![CDATA[不知不觉从五月又到末尾了，随着年龄的增长新的一年收获到总是比过往一年的要多，而五月恰恰是一年里我最喜欢的一个月份，聊聊在 2022 年的 5 月我都做了些]]></description>
+</item><item>
     <title>React组件间通信</title>
     <link>https://zheng-shugan.github.io/react-component-communication/</link>
     <pubDate>Thu, 21 Apr 2022 19:46:13 &#43;0800</pubDate>

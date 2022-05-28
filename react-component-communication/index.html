@@ -20,7 +20,7 @@
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://zheng-shugan.github.io/react-component-communication/" /><link rel="prev" href="https://zheng-shugan.github.io/macbookpro/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://zheng-shugan.github.io/react-component-communication/" /><link rel="prev" href="https://zheng-shugan.github.io/macbookpro/" /><link rel="next" href="https://zheng-shugan.github.io/2022maynote/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -129,7 +129,7 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
             </div><div class="content" id="content"><p>Hi，作为一个初次学习 React 的小白在了解了<code>state</code>和<code>props</code>之后就可以快乐的在父组件中传递数据给子组件，然后在子组件里使用父组件的回调函数去修改父组件的<code>state</code>了。但是在兄弟组件再像这样传递数据就会变得很麻烦了，父组件需要分别传递回调函数和数据给两个子组件，然后子组件再调用相应的属性和回调才能传递数据。</p>
-<p>比如说要实现一个在<code>Search</code>组件和<code>List	</code>组件之间传递数据：</p>
+<p>比如说要实现一个在<code>Search</code>组件和<code>List </code>组件之间传递数据：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -204,76 +204,76 @@
 </span><span class="lnt">70
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// App 组件
-</span><span class="c1"></span><span class="kr">class</span> <span class="nx">App</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
-  <span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">users</span><span class="o">:</span> <span class="p">[],</span> <span class="c1">// 初始化状态，users 是数组
-</span><span class="c1"></span>    <span class="nx">isFirst</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 是否为第一次打开
-</span><span class="c1"></span>    <span class="nx">isLoading</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// 标识是否处于加载中
-</span><span class="c1"></span>    <span class="nx">err</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// 存储请求相关错误信息
-</span><span class="c1"></span>  <span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// App 组件
+class App extends Component {
+  state = {
+    users: [], // 初始化状态，users 是数组
+    isFirst: true, // 是否为第一次打开
+    isLoading: false, // 标识是否处于加载中
+    err: &#39;&#39;, // 存储请求相关错误信息
+  }
 
-  <span class="c1">// 更新 App 的 state；传递给 Search 组件
-</span><span class="c1"></span>  <span class="nx">updateAppState</span> <span class="o">=</span> <span class="p">(</span><span class="nx">stateObj</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">(</span>
-      <span class="nx">stateObj</span>
-    <span class="p">)</span>
-  <span class="p">}</span>
+  // 更新 App 的 state；传递给 Search 组件
+  updateAppState = (stateObj) =&gt; {
+    this.setState(
+      stateObj
+    )
+  }
 
-  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">(</span>
-      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;container&#34;</span><span class="o">&gt;</span>
+  render() {
+    return (
+      &lt;div className=&#34;container&#34;&gt;
         
-        <span class="o">&lt;</span><span class="nx">Search</span> <span class="nx">updateAppState</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">updateAppState</span><span class="p">}</span><span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="nx">List</span> <span class="p">{...</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">}</span><span class="o">/&gt;</span>
-      <span class="o">&lt;</span><span class="err">/div&gt;</span>
-    <span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+        &lt;Search updateAppState={this.updateAppState}/&gt;
+        &lt;List {...this.state}/&gt;
+      &lt;/div&gt;
+    );
+  }
+}
 
-<span class="c1">// List 组件
-</span><span class="c1"></span><span class="kr">class</span> <span class="nx">List</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
-  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="p">{</span><span class="nx">users</span><span class="p">,</span> <span class="nx">isFirst</span><span class="p">,</span> <span class="nx">isLoading</span><span class="p">,</span> <span class="nx">err</span><span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span>
-    <span class="k">return</span> <span class="p">(</span>
-      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;row&#34;</span><span class="o">&gt;</span>
-        <span class="p">{</span>
-          <span class="c1">// 根据父组件中的 state 来选择展示页面
-</span><span class="c1"></span>          <span class="nx">isFirst</span> <span class="o">?</span> <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">欢迎输入</span><span class="err">，</span><span class="nx">输入关键词搜索</span><span class="o">&lt;</span><span class="err">/h2&gt; :</span>
-            <span class="nx">isLoading</span> <span class="o">?</span> <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Loading</span><span class="o">&lt;</span><span class="err">/h2&gt; :</span>
-              <span class="nx">err</span> <span class="o">?</span> <span class="o">&lt;</span><span class="nx">h2</span> <span class="nx">style</span><span class="o">=</span><span class="p">{{</span><span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;red&#39;</span><span class="p">}}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">err</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h2&gt;:</span>
-          <span class="nx">users</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">userObj</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-            <span class="k">return</span><span class="p">(</span>
-               	<span class="c1">// 页面内容
-</span><span class="c1"></span>            <span class="p">)</span>
-          <span class="p">})</span>
-        <span class="p">}</span>
-      <span class="o">&lt;</span><span class="err">/div&gt;</span>
-    <span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+// List 组件
+class List extends Component {
+  render() {
+    const {users, isFirst, isLoading, err} = this.props
+    return (
+      &lt;div className=&#34;row&#34;&gt;
+        {
+          // 根据父组件中的 state 来选择展示页面
+          isFirst ? &lt;h2&gt;欢迎输入，输入关键词搜索&lt;/h2&gt; :
+            isLoading ? &lt;h2&gt;Loading&lt;/h2&gt; :
+              err ? &lt;h2 style={{color: &#39;red&#39;}}&gt;{err}&lt;/h2&gt;:
+          users.map((userObj) =&gt; {
+            return(
+               	// 页面内容
+            )
+          })
+        }
+      &lt;/div&gt;
+    );
+  }
+}
 
-<span class="c1">// Search 组件
-</span><span class="c1"></span><span class="kr">class</span> <span class="nx">Search</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+// Search 组件
+class Search extends Component {
  
-  <span class="nx">search</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="c1">// 获取输入（连续解构赋值+重命名
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="p">{</span><span class="nx">keywordElement</span><span class="o">:</span> <span class="p">{</span><span class="nx">value</span><span class="o">:</span> <span class="nx">keyword</span><span class="p">}}</span> <span class="o">=</span> <span class="k">this</span>
-    <span class="c1">// 发送请求前通知 App 更新 state；通过调用父组件传递的函数更新父组件中的数据
-</span><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">updateAppState</span><span class="p">({</span><span class="nx">isFirst</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">isLoading</span><span class="o">:</span> <span class="kc">false</span><span class="p">})</span>
-    <span class="c1">// 发送网络请求
-</span><span class="c1"></span>    <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="sb">`http://localhost:3000/api1/search/users?q=</span><span class="si">${</span><span class="nx">keyword</span><span class="si">}</span><span class="sb">`</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
-      <span class="nx">response</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="c1">// 发送请求成功通知 App 更新 state；通过调用父组件传递的函数更新父组件中的数据
-</span><span class="c1"></span>        <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">updateAppState</span><span class="p">({</span><span class="nx">isLoading</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">users</span><span class="o">:</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">items</span><span class="p">})</span>
-      <span class="p">},</span>
-      <span class="nx">error</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="c1">// 发送请求失败通知 App 更新 state；通过调用父组件传递的函数更新父组件中的数据
-</span><span class="c1"></span>        <span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">updateAppState</span><span class="p">({</span><span class="nx">isLoading</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">err</span><span class="o">:</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">})</span>
-      <span class="p">}</span>
-    <span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+  search = () =&gt; {
+    // 获取输入（连续解构赋值+重命名
+    const {keywordElement: {value: keyword}} = this
+    // 发送请求前通知 App 更新 state；通过调用父组件传递的函数更新父组件中的数据
+    this.props.updateAppState({isFirst: false, isLoading: false})
+    // 发送网络请求
+    axios.get(`http://localhost:3000/api1/search/users?q=${keyword}`).then(
+      response =&gt; {
+        // 发送请求成功通知 App 更新 state；通过调用父组件传递的函数更新父组件中的数据
+        this.props.updateAppState({isLoading: false, users: response.data.items})
+      },
+      error =&gt; {
+        // 发送请求失败通知 App 更新 state；通过调用父组件传递的函数更新父组件中的数据
+        this.props.updateAppState({isLoading: false, err: error.message})
+      }
+    );
+  }
+}
 </code></pre></td></tr></table>
 </div>
 </div><p>为了在两个组件之间传递数据我们不得不通过父组件<code>App</code>给两个组件传递函数和属性，明明是两个兄弟组件传递起数据来别别扭扭的感觉是有仇一样的组件之间的交流全靠父组件。这样在组件之间传递数据的方式决不是一个好的选择，于是乎就有了<strong>消息订阅与发布机制</strong>，<a href="https://github.com/mroderick/PubSubJS" target="_blank" rel="noopener noreffer">PubSub.js</a> 就是这样的一个工具库。</p>
@@ -294,17 +294,17 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">App</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">class App extends Component {
 
-  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">(</span>
-      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;container&#34;</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nx">Search</span> <span class="o">/&gt;</span>
-        <span class="o">&lt;</span><span class="nx">List</span> <span class="o">/&gt;</span>
-      <span class="o">&lt;</span><span class="err">/div&gt;</span>
-    <span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+  render() {
+    return (
+      &lt;div className=&#34;container&#34;&gt;
+        &lt;Search /&gt;
+        &lt;List /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
 </code></pre></td></tr></table>
 </div>
 </div><p>接下来我们需要将<code>Search</code>组件中得到的数据传递到<code>List</code>组件。在这个关系中<code>Search</code>的发送方对应 PubSub 关系中的 puhlisher，<code>List</code>对应的是 subscriber。我们在这个项目中只需要知道怎么订阅和取消订阅即可，文档中对于的部分为 Basic example 和 Cancel specific subscription。</p>
@@ -325,19 +325,19 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 其中的 msg 是订阅消息的名称，data 是传递的数据
-</span><span class="c1"></span><span class="kd">var</span> <span class="nx">mySubscriber</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">msg</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
-<span class="p">};</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// 其中的 msg 是订阅消息的名称，data 是传递的数据
+var mySubscriber = function (msg, data) {
+    console.log(msg, data);
+};
 
-<span class="c1">// 先推送后订阅
-</span><span class="c1">// 推送一个订阅名称为 MY TOPIC 的消息，内容为 hello world!
-</span><span class="c1"></span><span class="nx">PubSub</span><span class="p">.</span><span class="nx">publish</span><span class="p">(</span><span class="s1">&#39;MY TOPIC&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world!&#39;</span><span class="p">);</span>
+// 先推送后订阅
+// 推送一个订阅名称为 MY TOPIC 的消息，内容为 hello world!
+PubSub.publish(&#39;MY TOPIC&#39;, &#39;hello world!&#39;);
 
-<span class="c1">// 创建一个 token 接收来自 MY TOPIC 推送
-</span><span class="c1"></span><span class="kd">var</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">PubSub</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;MY TOPIC&#39;</span><span class="p">,</span> <span class="nx">mySubscriber</span><span class="p">);</span>
-<span class="c1">// 根据 token 取消订阅消息
-</span><span class="c1"></span><span class="nx">PubSub</span><span class="p">.</span><span class="nx">unsubscribe</span><span class="p">(</span><span class="nx">token</span><span class="p">);</span>
+// 创建一个 token 接收来自 MY TOPIC 推送
+var token = PubSub.subscribe(&#39;MY TOPIC&#39;, mySubscriber);
+// 根据 token 取消订阅消息
+PubSub.unsubscribe(token);
 </code></pre></td></tr></table>
 </div>
 </div><p>在知道了怎么推送/订阅消息之后我们还要考虑什么时候订阅和取消订阅推送，正常的逻辑是在这个组件加载染到页面时才订阅消息，组件被卸载后就取消订阅。所以我们就可以在<code>componentDidMount</code>中订阅推送，在<code>componentWillUnmount</code>中取消订阅。到了这我们就可以放心的去重构<code>List</code>和<code>Search</code>中的代码了</p>
@@ -384,44 +384,44 @@
 </span><span class="lnt">38
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">List</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
-  <span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">users</span><span class="o">:</span> <span class="p">[],</span> <span class="c1">// 初始化状态，users 是数组
-</span><span class="c1"></span>    <span class="nx">isFirst</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 是否为第一次打开
-</span><span class="c1"></span>    <span class="nx">isLoading</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">// 标识是否处于加载中
-</span><span class="c1"></span>    <span class="nx">err</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// 存储请求相关错误信息
-</span><span class="c1"></span>  <span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">class List extends Component {
+  state = {
+    users: [], // 初始化状态，users 是数组
+    isFirst: true, // 是否为第一次打开
+    isLoading: false, // 标识是否处于加载中
+    err: &#39;&#39;, // 存储请求相关错误信息
+  }
 
-  <span class="c1">// 组件被挂载时订阅 
-</span><span class="c1"></span>  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">token</span> <span class="o">=</span> <span class="nx">PubSub</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;MY TOPIC&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">msg</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
-    <span class="p">})</span>
-  <span class="p">}</span>
+  // 组件被挂载时订阅 
+  componentDidMount() {
+    this.token = PubSub.subscribe(&#39;MY TOPIC&#39;, (msg, data) =&gt; {
+      this.setState(data)
+    })
+  }
 
-  <span class="c1">// 组件被卸载时取消订阅
-</span><span class="c1"></span>  <span class="nx">componentWillUnmount</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">PubSub</span><span class="p">.</span><span class="nx">unsubscribe</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">token</span><span class="p">)</span>
-  <span class="p">}</span>
+  // 组件被卸载时取消订阅
+  componentWillUnmount() {
+    PubSub.unsubscribe(this.token)
+  }
 
-  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="p">{</span><span class="nx">users</span><span class="p">,</span> <span class="nx">isFirst</span><span class="p">,</span> <span class="nx">isLoading</span><span class="p">,</span> <span class="nx">err</span><span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">state</span>
-    <span class="k">return</span> <span class="p">(</span>
-      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;row&#34;</span><span class="o">&gt;</span>
-        <span class="p">{</span>
-          <span class="nx">isFirst</span> <span class="o">?</span> <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">欢迎输入</span><span class="err">，</span><span class="nx">输入关键词搜索</span><span class="o">&lt;</span><span class="err">/h2&gt; :</span>
-            <span class="nx">isLoading</span> <span class="o">?</span> <span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Loading</span><span class="o">&lt;</span><span class="err">/h2&gt; :</span>
-              <span class="nx">err</span> <span class="o">?</span> <span class="o">&lt;</span><span class="nx">h2</span> <span class="nx">style</span><span class="o">=</span><span class="p">{{</span><span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;red&#39;</span><span class="p">}}</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">err</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h2&gt;:</span>
-          <span class="nx">users</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">userObj</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-            <span class="k">return</span><span class="p">(</span>
-             <span class="c1">// 页面内容
-</span><span class="c1"></span>            <span class="p">)</span>
-          <span class="p">})</span>
-        <span class="p">}</span>
-      <span class="o">&lt;</span><span class="err">/div&gt;</span>
-    <span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+  render() {
+    const {users, isFirst, isLoading, err} = this.state
+    return (
+      &lt;div className=&#34;row&#34;&gt;
+        {
+          isFirst ? &lt;h2&gt;欢迎输入，输入关键词搜索&lt;/h2&gt; :
+            isLoading ? &lt;h2&gt;Loading&lt;/h2&gt; :
+              err ? &lt;h2 style={{color: &#39;red&#39;}}&gt;{err}&lt;/h2&gt;:
+          users.map((userObj) =&gt; {
+            return(
+             // 页面内容
+            )
+          })
+        }
+      &lt;/div&gt;
+    );
+  }
+}
 </code></pre></td></tr></table>
 </div>
 </div><p><code>Search</code>组件重构后</p>
@@ -458,35 +458,35 @@
 </span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">Search</span> <span class="kr">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">class Search extends Component {
 
-  <span class="nx">search</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  search = () =&gt; {
     
-    <span class="c1">// 获取输入（连续解构赋值+重命名
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="p">{</span><span class="nx">keywordElement</span><span class="o">:</span> <span class="p">{</span><span class="nx">value</span><span class="o">:</span> <span class="nx">keyword</span><span class="p">}}</span> <span class="o">=</span> <span class="k">this</span>
-    <span class="c1">// 推送一个名为 MY TOPIC，内容是一个对象
-</span><span class="c1"></span>    <span class="nx">PubSub</span><span class="p">.</span><span class="nx">publish</span><span class="p">(</span><span class="s1">&#39;MY TOPIC&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">isFirst</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">isLoading</span><span class="o">:</span> <span class="kc">false</span><span class="p">})</span>
-    <span class="c1">// 发送网络请求
-</span><span class="c1"></span>    <span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="sb">`http://localhost:3000/api1/search/users?q=</span><span class="si">${</span><span class="nx">keyword</span><span class="si">}</span><span class="sb">`</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span>
-      <span class="nx">response</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="c1">// 发送请求成功通知 List 更新 state
-</span><span class="c1"></span>        <span class="c1">// 推送一个名为 MY TOPIC，内容是一个对象
-</span><span class="c1"></span>        <span class="nx">PubSub</span><span class="p">.</span><span class="nx">publish</span><span class="p">(</span><span class="s1">&#39;MY TOPIC&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">isLoading</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">users</span><span class="o">:</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">items</span><span class="p">})</span>
-      <span class="p">},</span>
-      <span class="nx">error</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="c1">// 发送请求失败通知 List 更新 state
-</span><span class="c1"></span>        <span class="c1">// 推送一个名为 MY TOPIC，内容是一个对象
-</span><span class="c1"></span>        <span class="nx">PubSub</span><span class="p">.</span><span class="nx">publish</span><span class="p">(</span><span class="s1">&#39;MY TOPIC&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">isLoading</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">err</span><span class="o">:</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">})</span>
-      <span class="p">}</span>
-    <span class="p">)</span>
-  <span class="p">}</span>
+    // 获取输入（连续解构赋值+重命名
+    const {keywordElement: {value: keyword}} = this
+    // 推送一个名为 MY TOPIC，内容是一个对象
+    PubSub.publish(&#39;MY TOPIC&#39;, {isFirst: false, isLoading: false})
+    // 发送网络请求
+    axios.get(`http://localhost:3000/api1/search/users?q=${keyword}`).then(
+      response =&gt; {
+        // 发送请求成功通知 List 更新 state
+        // 推送一个名为 MY TOPIC，内容是一个对象
+        PubSub.publish(&#39;MY TOPIC&#39;, {isLoading: false, users: response.data.items})
+      },
+      error =&gt; {
+        // 发送请求失败通知 List 更新 state
+        // 推送一个名为 MY TOPIC，内容是一个对象
+        PubSub.publish(&#39;MY TOPIC&#39;, {isLoading: false, err: error.message})
+      }
+    )
+  }
 
-  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">(</span>
-        <span class="c1">// 页面内容
-</span><span class="c1"></span>    <span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+  render() {
+    return (
+        // 页面内容
+    );
+  }
+}
 </code></pre></td></tr></table>
 </div>
 </div><p>经过测试重构后的代码的功能和原来的代码保持一致但是代码和逻辑都更清楚了。</p>
@@ -513,7 +513,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/macbookpro/" class="prev" rel="prev" title="我听说新 Mac 是造梦引擎？"><i class="fas fa-angle-left fa-fw"></i>我听说新 Mac 是造梦引擎？</a></div>
+    <div class="post-nav"><a href="/macbookpro/" class="prev" rel="prev" title="我听说新 Mac 是造梦引擎？"><i class="fas fa-angle-left fa-fw"></i>我听说新 Mac 是造梦引擎？</a>
+            <a href="/2022maynote/" class="next" rel="next" title="五月小记">五月小记<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">
