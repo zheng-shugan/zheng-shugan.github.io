@@ -20,7 +20,7 @@
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://zheng-shugan.github.io/dvanote/" /><link rel="prev" href="https://zheng-shugan.github.io/2022maynote/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://zheng-shugan.github.io/dvanote/" /><link rel="prev" href="https://zheng-shugan.github.io/2022maynote/" /><link rel="next" href="https://zheng-shugan.github.io/reactwithts/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -206,34 +206,34 @@
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">class</span> <span class="nx">Son</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
-  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">onChange</span><span class="p">}</span><span class="o">/&gt;</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kr">class</span> <span class="nx">Father</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
-  <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kr">super</span><span class="p">();</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="nx">son</span><span class="o">:</span> <span class="s2">&#34;&#34;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  <span class="nx">changeHandler</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
-      <span class="nx">son</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span>
-    <span class="p">});</span>
-  <span class="p">}</span>
-  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="nx">Son</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">changeHandler</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span><span class="o">/&gt;</span>
-      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">这里显示</span> <span class="nx">Son</span> <span class="nx">组件的内容</span><span class="err">：</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">son</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
-    <span class="o">&lt;</span><span class="err">/div&gt;;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Father</span><span class="o">/&gt;</span><span class="p">,</span> <span class="nx">mountNode</span><span class="p">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Son</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">onChange</span><span class="p">}</span><span class="o">/&gt;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Father</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">super</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">son</span><span class="o">:</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">changeHandler</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">son</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">Son</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">changeHandler</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">)}</span><span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">这里显示</span> <span class="nx">Son</span> <span class="nx">组件的内容</span><span class="err">：</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">son</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/div&gt;;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Father</span><span class="o">/&gt;</span><span class="p">,</span> <span class="nx">mountNode</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="12-数据流问题">1.2 数据流问题</h3>
 <p>主流的数据流解决方案有：</p>
@@ -256,16 +256,16 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="nx">dva</span> <span class="nx">from</span> <span class="s1">&#39;dva&#39;</span><span class="p">;</span>
-<span class="kr">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">dva</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
-
-<span class="c1">// 创建应用
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">dva</span><span class="p">();</span>
-<span class="c1">// 注册视图
-</span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">);</span>
-<span class="c1">// 启动应用
-</span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="s1">&#39;#root&#39;</span><span class="p">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">dva</span> <span class="nx">from</span> <span class="s1">&#39;dva&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Hello</span> <span class="nx">dva</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 创建应用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">dva</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 注册视图
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 启动应用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="s1">&#39;#root&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="22-数据流">2.2 数据流</h3>
 <p><img
@@ -297,11 +297,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="p">{</span>
-  <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;click-submit-button&#39;</span><span class="p">,</span>
-  <span class="nx">payload</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">form</span><span class="p">.</span><span class="nx">data</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;click-submit-button&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">payload</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">form</span><span class="p">.</span><span class="nx">data</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="234-connect">2.3.4 connect</h4>
 <p>绑定 State 到 View</p>
@@ -315,13 +315,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">connect</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;dva&#39;</span><span class="p">;</span>
-
-<span class="kd">function</span> <span class="nx">mapStateToProps</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">{</span> <span class="nx">todos</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">todos</span> <span class="p">};</span>
-<span class="p">}</span>
-<span class="nx">connect</span><span class="p">(</span><span class="nx">mapStateToProps</span><span class="p">)(</span><span class="nx">App</span><span class="p">);</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">connect</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;dva&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">mapStateToProps</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">{</span> <span class="nx">todos</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">todos</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nx">connect</span><span class="p">(</span><span class="nx">mapStateToProps</span><span class="p">)(</span><span class="nx">App</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>connect()</code> 返回的也是一个 React 组件，通常称为容器组件。因为它是原始的 UI 组件的容器，即在外面包了一层 State。</p>
 <p><code>connect()</code> 方法传入的第一个参数是 <code>mapStateToProps</code> 函数，它会返回一个对象，用户建立 State 到 Props 的映射关系。</p>
@@ -335,11 +335,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">dispatch</span><span class="p">({</span>
-    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;click-submit-button&#39;</span><span class="p">,</span>
-    <span class="nx">payload</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">form</span><span class="p">.</span><span class="nx">data</span>
-<span class="p">})</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">dispatch</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;click-submit-button&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">payload</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">form</span><span class="p">.</span><span class="nx">data</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>dispatch()</code> 不是从石头蹦出来的，而是被 <code>connect()</code> 的组件会自动在 props 中拥有 <code>dispatch()</code> 方法。</p>
 <blockquote>
@@ -373,30 +373,30 @@
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// 创建应用
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">dva</span><span class="p">()</span>
-
-<span class="c1">// 注册 Model
-</span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">model</span><span class="p">({</span>
-  <span class="nx">namespace</span><span class="o">:</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span>
-  <span class="nx">state</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-  <span class="nx">reducers</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">add</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">state</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nx">effects</span><span class="o">:</span> <span class="p">{</span>
-    <span class="o">*</span><span class="nx">addAfter1Second</span><span class="p">(</span><span class="nx">action</span><span class="p">,</span> <span class="p">{</span> <span class="nx">call</span><span class="p">,</span> <span class="nx">put</span> <span class="p">})</span> <span class="p">{</span>
-      <span class="k">yield</span> <span class="nx">call</span><span class="p">(</span><span class="nx">delay</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-      <span class="k">yield</span> <span class="nx">put</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;add&#39;</span> <span class="p">})</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">})</span>
-
-<span class="c1">// 注册 View
-</span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="o">&lt;</span><span class="nx">ConnectedApp</span> <span class="o">/&gt;</span><span class="p">);</span>
-
-<span class="c1">// 启动
-</span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="s1">&#39;#root&#39;</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 创建应用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">dva</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 注册 Model
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">model</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">namespace</span><span class="o">:</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">state</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">reducers</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">add</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">state</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">effects</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="o">*</span><span class="nx">addAfter1Second</span><span class="p">(</span><span class="nx">action</span><span class="p">,</span> <span class="p">{</span> <span class="nx">call</span><span class="p">,</span> <span class="nx">put</span> <span class="p">})</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">yield</span> <span class="nx">call</span><span class="p">(</span><span class="nx">delay</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="k">yield</span> <span class="nx">put</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;add&#39;</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 注册 View
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">router</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="o">&lt;</span><span class="nx">ConnectedApp</span> <span class="o">/&gt;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 启动
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="s1">&#39;#root&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>数据流</strong></p>
 <p><img
@@ -457,11 +457,12 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/2022maynote/" class="prev" rel="prev" title="五月小记"><i class="fas fa-angle-left fa-fw"></i>五月小记</a></div>
+    <div class="post-nav"><a href="/2022maynote/" class="prev" rel="prev" title="五月小记"><i class="fas fa-angle-left fa-fw"></i>五月小记</a>
+            <a href="/reactwithts/" class="next" rel="next" title="React With TS">React With TS<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.92.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">zhengshugan</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
