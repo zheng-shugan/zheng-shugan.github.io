@@ -43,6 +43,7 @@ export interface HelloProps {
 }
 
 const Hello = ({ name, enthusiasmLevel = 1 }: HelloProps) => {
+ 
 	const getExclamationMarks = (numChars: number): string => {
 		return Array(numChars + 1).join('!')
 	}
@@ -83,6 +84,7 @@ export interface HiProps {
 // 这里的 HiProps 是 this.props 类型
 class Hi extends React.Component<HiProps, object> {
 	render() {
+    
 		const { name, enthusiasmLevel = 1 } = this.props
 
 		if (enthusiasmLevel <= 0) {
