@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/zheng-shugan.github.io\/reactwithts\/"
-        },"genre": "posts","wordcount":  817 ,
+        },"genre": "posts","wordcount":  839 ,
         "url": "https:\/\/zheng-shugan.github.io\/reactwithts\/","datePublished": "2022-06-28T12:55:53+08:00","dateModified": "2022-06-28T12:55:53+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">React With TS</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>zhengshugan</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-28">2022-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 817 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-28">2022-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 839 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -201,9 +201,12 @@
 </span><span class="lnt">24
 </span><span class="lnt">25
 </span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// Type with props
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">HelloProps</span> <span class="p">{</span>
@@ -212,18 +215,21 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Hello</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">enthusiasmLevel</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">}</span><span class="o">:</span> <span class="nx">HelloProps</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">	<span class="c1">// Hook with TS
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kr">const</span> <span class="p">[</span><span class="nx">message</span><span class="p">,</span> <span class="nx">setMessage</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;(</span><span class="sb">`Hello </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="kr">const</span> <span class="nx">getExclamationMarks</span> <span class="o">=</span> <span class="p">(</span><span class="nx">numChars</span>: <span class="kt">number</span><span class="p">)</span><span class="o">:</span> <span class="kt">string</span> <span class="o">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">numChars</span> <span class="o">+</span> <span class="mi">1</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;!&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// Hooks with TS
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  	<span class="c1">// 将 message 的类型设置为 string
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kr">const</span> <span class="p">[</span><span class="nx">message</span><span class="p">,</span> <span class="nx">setMessage</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nx">useEffect</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">setMessage</span><span class="p">(</span><span class="sb">`Hello </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span> <span class="o">+</span> <span class="nx">getExclamationMarks</span><span class="p">(</span><span class="nx">enthusiasmLevel</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="p">},</span> <span class="p">[</span><span class="nx">enthusiasmLevel</span><span class="p">,</span> <span class="nx">name</span><span class="p">])</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;{</span> <span class="nx">message</span> <span class="o">+</span> <span class="nx">getExclamationMarks</span><span class="p">(</span><span class="nx">enthusiasmLevel</span><span class="p">)}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;{</span> <span class="nx">message</span> <span class="p">}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">		<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>

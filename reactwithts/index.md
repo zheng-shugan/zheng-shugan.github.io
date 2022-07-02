@@ -34,7 +34,7 @@ npx create-react-app my-ts-app --template typescript
 ### 创建一个 TS 组件
 
 ```tsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Type with props
 export interface HelloProps {
@@ -43,18 +43,21 @@ export interface HelloProps {
 }
 
 const Hello = ({ name, enthusiasmLevel = 1 }: HelloProps) => {
-  
-	// Hook with TS
-	const [message, setMessage] = useState<string>(`Hello ${name}`)
-
 	const getExclamationMarks = (numChars: number): string => {
 		return Array(numChars + 1).join('!')
 	}
 
+	// Hooks with TS
+  	// 将 message 的类型设置为 string
+	const [message, setMessage] = useState<string>('')
+
+	useEffect(() => {
+		setMessage(`Hello ${name}` + getExclamationMarks(enthusiasmLevel))
+	}, [enthusiasmLevel, name])
 
 	return (
 		<div>
-			<h1>{ message + getExclamationMarks(enthusiasmLevel)}</h1>
+			<h1>{ message }</h1>
 		</div>
 	);
 };
