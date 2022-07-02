@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/zheng-shugan.github.io\/reactwithts\/"
-        },"genre": "posts","wordcount":  815 ,
+        },"genre": "posts","wordcount":  817 ,
         "url": "https:\/\/zheng-shugan.github.io\/reactwithts\/","datePublished": "2022-06-28T12:55:53+08:00","dateModified": "2022-06-28T12:55:53+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">React With TS</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>zhengshugan</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-28">2022-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 815 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-06-28">2022-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 817 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -138,10 +138,10 @@
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="为什么要使用-typescript">为什么要使用 TypeScript？</h2>
-<p>JS（JavaScript）是一门功能强大的语言，但是作为一门动态类型语言有时候简直是在浪费 IDE 强大的补全功能，就因为它是弱类型的语言，IDE 不能准确的推断出对象的类型，从而进行准确的提示。这一点对 VSCode 这种文本编辑器愈大。</p>
-<p>TS（TypeScript）作为 JS 的一个超集，就和它的名字一样，为 JS 添加了 Type。作为一门静态语言，毫无疑问对 IDE 的语法补全有出色的帮助。别的优点不提，在 IDE 中的补全更强就是学 TS 的一大理由，哪怕需要添加更多的代码。</p>
+<p>JS（JavaScript）是一门功能强大的语言，但是作为一门动态类型语言有时候简直是在浪费 IDE 强大的补全功能，就因为它是弱类型的语言，IDE 不能准确的推断出对象的类型，从而进行准确的提示。这一点对 VSCode 这种文本编辑器影响愈大。</p>
+<p>TS（TypeScript）作为 JS 的一个超集，就和它的名字一样，为 JS 添加了 <strong>Type</strong>。作为一门静态语言，毫无疑问对 IDE 的语法补全有出色的帮助。别的优点不提，在 IDE 中的补全更强就是使用 TS 的一大理由，而且类型本身就是一种注释，哪怕需要添加更多的代码。</p>
 <h2 id="在-react-中使用-ts">在 React 中使用 TS</h2>
-<p>新建一个 React app 最简单的方式当然是使用 CRA 的 TS 模版了。只需在执行：</p>
+<p>新建一个 React app 最简单的方式当然是使用 CRA 的 TS 模版了。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -199,32 +199,36 @@
 </span><span class="lnt">22
 </span><span class="lnt">23
 </span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="c1">// src/components/Hello.tsx
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">React</span> <span class="kr">from</span> <span class="s1">&#39;react&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">HelloProps</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="nx">name</span>: <span class="kt">string</span>
-</span></span><span class="line"><span class="cl">	<span class="nx">enthusiasmLevel?</span>: <span class="kt">number</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Type with props
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="kr">interface</span> <span class="nx">HelloProps</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">name</span>: <span class="kt">string</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">enthusiasmLevel?</span>: <span class="kt">number</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Hello</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">enthusiasmLevel</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">}</span><span class="o">:</span> <span class="nx">HelloProps</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="p">(</span><span class="nx">enthusiasmLevel</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">&#39;You could be a little more enthusiastic. :D&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">	<span class="c1">// Hook with TS
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kr">const</span> <span class="p">[</span><span class="nx">message</span><span class="p">,</span> <span class="nx">setMessage</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">&lt;</span><span class="nt">string</span><span class="p">&gt;(</span><span class="sb">`Hello </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="kr">const</span> <span class="nx">getExclamationMarks</span> <span class="o">=</span> <span class="p">(</span><span class="nx">numChars</span>: <span class="kt">number</span><span class="p">)</span><span class="o">:</span> <span class="kt">string</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">numChars</span> <span class="o">+</span> <span class="mi">1</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;!&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="nx">Hello</span> <span class="p">{</span><span class="nx">name</span> <span class="o">+</span> <span class="nx">getExclamationMarks</span><span class="p">(</span><span class="nx">enthusiasmLevel</span><span class="p">)}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">Hello</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;{</span> <span class="nx">message</span> <span class="o">+</span> <span class="nx">getExclamationMarks</span><span class="p">(</span><span class="nx">enthusiasmLevel</span><span class="p">)}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// helpers
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">getExclamationMarks</span> <span class="o">=</span> <span class="p">(</span><span class="nx">numChars</span>: <span class="kt">number</span><span class="p">)</span><span class="o">:</span> <span class="kt">string</span> <span class="o">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nb">Array</span><span class="p">(</span><span class="nx">numChars</span> <span class="o">+</span> <span class="mi">1</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;!&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">Hello</span><span class="p">;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>注意到我们定义了一个 <code>HelloProps</code> 类型，它指定了这个组件需要用到的属性。在接受参数的时候我们为参数加上类型 <code>HelloProps</code>，一旦定义了类型，那么父组件就一定需要传递类型中的属性给子组件，否则将会报错。这样我们在 <code>Hello</code> 组件里接受到的参数就都是有类型的了。</p>
@@ -259,7 +263,6 @@
 </span><span class="lnt">26
 </span><span class="lnt">27
 </span><span class="lnt">28
-</span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="c1">// src/components/Hi.tsx
@@ -273,7 +276,6 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// React.Component&lt;HiProps, object&gt; 相当于 React 的泛型
 </span></span></span><span class="line"><span class="cl"><span class="c1">// 这里的 HiProps 是 this.props 类型
-</span></span></span><span class="line"><span class="cl"><span class="c1">// object 是 this.state 的类型
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">class</span> <span class="nx">Hi</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span><span class="p">&lt;</span><span class="nt">HiProps</span><span class="err">,</span> <span class="na">object</span><span class="p">&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">render() {</span>
 </span></span><span class="line"><span class="cl">		<span class="kr">const</span> <span class="p">{</span> <span class="nx">name</span><span class="p">,</span> <span class="nx">enthusiasmLevel</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">props</span>
