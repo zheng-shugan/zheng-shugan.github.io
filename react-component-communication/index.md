@@ -5,14 +5,14 @@ Hi，作为一个初次学习 React 的小白在了解了`state`和`props`之后
 
 比如说要实现一个在`Search`组件和`List `组件之间传递数据：
 
-```
+```javascript
 // App 组件
 class App extends Component {
   state = {
-    users: [], // 初始化状态，users 是数组
-    isFirst: true, // 是否为第一次打开
-    isLoading: false, // 标识是否处于加载中
-    err: '', // 存储请求相关错误信息
+    users: [], 			// 初始化状态，users 是数组
+    isFirst: true, 		// 是否为第一次打开
+    isLoading: false, 	// 标识是否处于加载中
+    err: '', 			// 存储请求相关错误信息
   }
 
   // 更新 App 的 state；传递给 Search 组件
@@ -75,16 +75,14 @@ class Search extends Component {
       }
     );
   }
-}
+}为了在两个组件之间传递数据我们不得不通过父组件`App`给两个组件传递函数和属性，明明是两个兄弟组件传递起数据来别别扭扭的感觉是有仇一样的组件之间的交流全靠父组件。这样在组件之间传递数据的方式决不是一个好的选择，于是乎就有了**消息订阅与发布机制**，[PubSub.js](https://github.com/mroderick/PubSubJS) 就是这样的一个工具库。
 ```
-
-为了在两个组件之间传递数据我们不得不通过父组件`App`给两个组件传递函数和属性，明明是两个兄弟组件传递起数据来别别扭扭的感觉是有仇一样的组件之间的交流全靠父组件。这样在组件之间传递数据的方式决不是一个好的选择，于是乎就有了**消息订阅与发布机制**，[PubSub.js](https://github.com/mroderick/PubSubJS) 就是这样的一个工具库。
 
 README 就有 Example 来知指导我们怎么下载和导入，在这就不多赘述。安装、导入之后就可以开始重构我们的代码了。
 
 先考虑 App 组件。App 组件中的`state`部分是为了在两个子组件传递数据才设置的，现在可以直接在两个组件之间传递数据，而在`Search`组件中需要通过数据来更新展示页面所以可以把 App 组件中的`state`部分剪切到`Search`组件中；数据都到了`Search`组件中那么原来为了修改`state`的函数`updateAppState`也就不需要了；对应的也不需要再往子组件里传递`props`了。
 
-```
+```javascript
 class App extends Component {
 
   render() {
@@ -100,7 +98,7 @@ class App extends Component {
 
 接下来我们需要将`Search`组件中得到的数据传递到`List`组件。在这个关系中`Search`的发送方对应 PubSub 关系中的 puhlisher，`List`对应的是 subscriber。我们在这个项目中只需要知道怎么订阅和取消订阅即可，文档中对于的部分为 Basic example 和 Cancel specific subscription。
 
-```
+```javascript
 // 其中的 msg 是订阅消息的名称，data 是传递的数据
 var mySubscriber = function (msg, data) {
     console.log(msg, data);
@@ -120,13 +118,13 @@ PubSub.unsubscribe(token);
 
 `List`组件重构后
 
-```
+```javascript
 class List extends Component {
   state = {
-    users: [], // 初始化状态，users 是数组
-    isFirst: true, // 是否为第一次打开
-    isLoading: false, // 标识是否处于加载中
-    err: '', // 存储请求相关错误信息
+    users: [], 			// 初始化状态，users 是数组
+    isFirst: true, 		// 是否为第一次打开
+    isLoading: false, 	// 标识是否处于加载中
+    err: '', 			// 存储请求相关错误信息
   }
 
   // 组件被挂载时订阅 
@@ -163,7 +161,7 @@ class List extends Component {
 
 `Search`组件重构后
 
-```
+```javascript
 class Search extends Component {
 
   search = () => {
