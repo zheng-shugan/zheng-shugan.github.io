@@ -3,9 +3,16 @@
         <title>Quasi IDEA</title>
         <link>https://zheng-shugan.github.io/</link>
         <description>quasi of IDEA</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 22 Jul 2022 16:28:16 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 31 Jul 2022 20:32:36 &#43;0800</lastBuildDate>
             <atom:link href="https://zheng-shugan.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>const 的困惑</title>
+    <link>https://zheng-shugan.github.io/aboutconst/</link>
+    <pubDate>Sun, 31 Jul 2022 20:32:36 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://zheng-shugan.github.io/aboutconst/</guid>
+    <description><![CDATA[const 是为了解决什么问题？ 有时候我们希望定义这样一种变量，它的值不能被改变。例如，用一个变量来表示缓冲区的大小。使用变量的好处是当我们觉得缓冲区]]></description>
+</item><item>
     <title>Mock 数据</title>
     <link>https://zheng-shugan.github.io/mockdata/</link>
     <pubDate>Fri, 22 Jul 2022 16:28:16 &#43;0800</pubDate>
