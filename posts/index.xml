@@ -3,7 +3,14 @@
         <title>所有文章 - Quasi IDEA</title>
         <link>https://zheng-shugan.github.io/posts/</link>
         <description>所有文章 | Quasi IDEA</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 13 Sep 2022 21:16:19 &#43;0800</lastBuildDate><atom:link href="https://zheng-shugan.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 05 Oct 2022 22:11:34 &#43;0800</lastBuildDate><atom:link href="https://zheng-shugan.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>聊聊我是如何搭建个人知识库的</title>
+    <link>https://zheng-shugan.github.io/your-mind-palace/</link>
+    <pubDate>Wed, 05 Oct 2022 22:11:34 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://zheng-shugan.github.io/your-mind-palace/</guid>
+    <description><![CDATA[个人知识库搭建 为什么要搭建个人知识库 方便复习 方便分享 搭建知识库的需求 支持 Markdown 语法 云同步 好看 思维导图 流程图 没有广告 怎么搭建 写作软件 个人博客 总结 下]]></description>
+</item><item>
     <title>关于新学一门编程语言的痛</title>
     <link>https://zheng-shugan.github.io/aboutlearnnewprogramminglang/</link>
     <pubDate>Tue, 13 Sep 2022 21:16:19 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://zheng-shugan.github.io/macbookpro/</guid>
     <description><![CDATA[我自己拥有的第一台电脑苹果第一台搭载自研桌面级处理的 MacBook，2020 年它带着光环而来。搭载全新的 Apple Silicon、10 小时续航、统一]]></description>
-</item><item>
-    <title>Hello world</title>
-    <link>https://zheng-shugan.github.io/helloworld/</link>
-    <pubDate>Fri, 11 Feb 2022 02:27:51 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://zheng-shugan.github.io/helloworld/</guid>
-    <description><![CDATA[从高中开始就很想搭建一个自己的博客网站觉得这是一件特别酷的事情：在自己的网站上介绍自己的作品、分享自己产品体验又或是记录自己的碎碎念&hel]]></description>
 </item></channel>
 </rss>
