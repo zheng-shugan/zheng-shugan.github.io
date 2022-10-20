@@ -3,9 +3,16 @@
         <title>Quasi IDEA</title>
         <link>https://zheng-shugan.github.io/</link>
         <description>quasi of IDEA</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 05 Oct 2022 22:11:34 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 20 Oct 2022 22:12:21 &#43;0800</lastBuildDate>
             <atom:link href="https://zheng-shugan.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>如何入手一个前端开源项目</title>
+    <link>https://zheng-shugan.github.io/to-use-opensource/</link>
+    <pubDate>Thu, 20 Oct 2022 22:12:21 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://zheng-shugan.github.io/to-use-opensource/</guid>
+    <description><![CDATA[如何入手一个开源项目 克隆到本地 安装依赖 pnpm yarn npm 看 package.json 主要看 script 和 dependencies 部分 从 App 组件入手，逐级往下看 为什么要找开源项目 很多人在学完基础想要找项目的时候就]]></description>
+</item><item>
     <title>聊聊我是如何搭建个人知识库的</title>
     <link>https://zheng-shugan.github.io/your-mind-palace/</link>
     <pubDate>Wed, 05 Oct 2022 22:11:34 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://zheng-shugan.github.io/react-component-communication/</guid>
     <description><![CDATA[Hi，作为一个初次学习 React 的小白在了解了state和props之后就可以快乐的在父组件中传递数据给子组件，然后在子组件里使用父组件的回调函数去]]></description>
-</item><item>
-    <title>我听说新 Mac 是造梦引擎？</title>
-    <link>https://zheng-shugan.github.io/macbookpro/</link>
-    <pubDate>Wed, 09 Mar 2022 02:27:51 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://zheng-shugan.github.io/macbookpro/</guid>
-    <description><![CDATA[我自己拥有的第一台电脑苹果第一台搭载自研桌面级处理的 MacBook，2020 年它带着光环而来。搭载全新的 Apple Silicon、10 小时续航、统一]]></description>
 </item></channel>
 </rss>
