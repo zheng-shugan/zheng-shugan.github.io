@@ -3,7 +3,14 @@
         <title>所有文章 - Quasi IDEA</title>
         <link>https://zheng-shugan.github.io/posts/</link>
         <description>所有文章 | Quasi IDEA</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 20 Oct 2022 22:12:21 &#43;0800</lastBuildDate><atom:link href="https://zheng-shugan.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 30 Nov 2022 22:42:23 &#43;0800</lastBuildDate><atom:link href="https://zheng-shugan.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Web 工具链换源</title>
+    <link>https://zheng-shugan.github.io/toolchain-source-config/</link>
+    <pubDate>Wed, 30 Nov 2022 22:42:23 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://zheng-shugan.github.io/toolchain-source-config/</guid>
+    <description><![CDATA[配置的烦恼 每次用个新的工具链都要先看一下怎么换到国内源，要不然那个下载速度实在是太感人了，所以就打算收集一下 Web 前后端开发需要换源的工具链。 在]]></description>
+</item><item>
     <title>如何入手一个前端开源项目</title>
     <link>https://zheng-shugan.github.io/to-use-opensource/</link>
     <pubDate>Thu, 20 Oct 2022 22:12:21 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://zheng-shugan.github.io/2022maynote/</guid>
     <description><![CDATA[不知不觉从五月又到末尾了，随着年龄的增长新的一年收获到总是比过往一年的要多，而五月恰恰是一年里我最喜欢的一个月份，聊聊在 2022 年的 5 月我都做了些]]></description>
-</item><item>
-    <title>React组件间通信</title>
-    <link>https://zheng-shugan.github.io/react-component-communication/</link>
-    <pubDate>Thu, 21 Apr 2022 19:46:13 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://zheng-shugan.github.io/react-component-communication/</guid>
-    <description><![CDATA[Hi，作为一个初次学习 React 的小白在了解了state和props之后就可以快乐的在父组件中传递数据给子组件，然后在子组件里使用父组件的回调函数去]]></description>
 </item></channel>
 </rss>
