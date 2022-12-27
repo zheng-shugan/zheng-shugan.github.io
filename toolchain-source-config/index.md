@@ -9,6 +9,7 @@
 ### 系统设置
 
 #### Homebrew
+
 Homebrew 是 macOS 下的一个包管理工具，可以很方便的去安装、管理各种开发环境和软件，如果你用的也是 macOS 作为开发平台 homebrew一定不可错过的一个好工具。
 
 查看当前源：
@@ -30,6 +31,7 @@ source .zshrc
 正式因为 Node 的出现前端才越来越组件化、工程化，Node.js 的发展也证明它不仅可以在前端发光发热，在后端领域也是有着不少合适的领域。
 npm、yarn、pnpm 都是前端的包管理工具，个人更偏爱 pnpm 一点但是 yarn 在键盘上的位置更好按哈哈哈哈
 npm
+
 ```zsh 
 # 查看当前源
 npm get registry
@@ -50,4 +52,27 @@ pnpm get registry
 # 设置 pnpm 镜像源为淘宝镜像
 pnpm config set registry https://registry.npm.taobao.org/
 ```
+
+### Python
+
+说到编程语言怎么能少的了 Python 呢，虽然纯 Python 的岗位不多但是 Python 上手真的是非常友好了。Python 也有着超多的第三方库，我完成的第一个小游戏飞机大涨就是用 Python 和 PyGame 写出来的。
+
+#### pip
+
+查看当前源：
+
+```zsh
+pip config list
+```
+
+替换为清华源：
+
+```zsh
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+
+
+
+
 

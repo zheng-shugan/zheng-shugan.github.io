@@ -3,9 +3,16 @@
         <title>Quasi IDEA</title>
         <link>https://zheng-shugan.github.io/</link>
         <description>quasi of IDEA</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 30 Nov 2022 22:42:23 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 27 Dec 2022 22:19:31 &#43;0800</lastBuildDate>
             <atom:link href="https://zheng-shugan.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Covid 19 Review</title>
+    <link>https://zheng-shugan.github.io/covid-19-review/</link>
+    <pubDate>Tue, 27 Dec 2022 22:19:31 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://zheng-shugan.github.io/covid-19-review/</guid>
+    <description><![CDATA[2022 年 12 月 22 号我不幸感染了 COVID-19，根据最新的中文叫法应该是「新冠感染」，不过我不想玩那么低级的文字游戏，所以就用 COVID-19 来称呼。 鼓励和推荐]]></description>
+</item><item>
     <title>Web 工具链换源</title>
     <link>https://zheng-shugan.github.io/toolchain-source-config/</link>
     <pubDate>Wed, 30 Nov 2022 22:42:23 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://zheng-shugan.github.io/dvanote/</guid>
     <description><![CDATA[1. React 没有解决的问题 React 本身只是一个 DOM 的抽象层，使用组件构建 Virtual DOM。 如果需要开发大应用，还需要解决 组件件通信——组件之间如何交换数据 数据流——]]></description>
-</item><item>
-    <title>五月小记</title>
-    <link>https://zheng-shugan.github.io/2022maynote/</link>
-    <pubDate>Sat, 28 May 2022 17:11:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://zheng-shugan.github.io/2022maynote/</guid>
-    <description><![CDATA[不知不觉从五月又到末尾了，随着年龄的增长新的一年收获到总是比过往一年的要多，而五月恰恰是一年里我最喜欢的一个月份，聊聊在 2022 年的 5 月我都做了些]]></description>
 </item></channel>
 </rss>

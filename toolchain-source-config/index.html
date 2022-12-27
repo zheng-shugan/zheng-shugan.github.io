@@ -20,7 +20,7 @@
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://zheng-shugan.github.io/toolchain-source-config/" /><link rel="prev" href="https://zheng-shugan.github.io/to-use-opensource/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://zheng-shugan.github.io/toolchain-source-config/" /><link rel="prev" href="https://zheng-shugan.github.io/to-use-opensource/" /><link rel="next" href="https://zheng-shugan.github.io/covid-19-review/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/zheng-shugan.github.io\/toolchain-source-config\/"
-        },"genre": "posts","wordcount":  444 ,
+        },"genre": "posts","wordcount":  549 ,
         "url": "https:\/\/zheng-shugan.github.io\/toolchain-source-config\/","datePublished": "2022-11-30T22:42:23+08:00","dateModified": "2022-11-30T22:42:23+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,8 +120,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Web 工具链换源</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>zhengshugan</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-11-30">2022-11-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 444 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-11-30">2022-11-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 549 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -140,6 +140,11 @@
         <li><a href="#前端">前端</a>
           <ul>
             <li><a href="#node">Node</a></li>
+          </ul>
+        </li>
+        <li><a href="#python">Python</a>
+          <ul>
+            <li><a href="#pip">pip</a></li>
           </ul>
         </li>
       </ul>
@@ -229,6 +234,27 @@ npm</p>
 </span></span><span class="line"><span class="cl">pnpm config <span class="nb">set</span> registry https://registry.npm.taobao.org/
 </span></span></code></pre></td></tr></table>
 </div>
+</div><h3 id="python">Python</h3>
+<p>说到编程语言怎么能少的了 Python 呢，虽然纯 Python 的岗位不多但是 Python 上手真的是非常友好了。Python 也有着超多的第三方库，我完成的第一个小游戏飞机大涨就是用 Python 和 PyGame 写出来的。</p>
+<h4 id="pip">pip</h4>
+<p>查看当前源：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh"><span class="line"><span class="cl">pip config list
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>替换为清华源：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh"><span class="line"><span class="cl">pip config <span class="nb">set</span> global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+</span></span></code></pre></td></tr></table>
+</div>
 </div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -252,7 +278,8 @@ npm</p>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/to-use-opensource/" class="prev" rel="prev" title="如何入手一个前端开源项目"><i class="fas fa-angle-left fa-fw"></i>如何入手一个前端开源项目</a></div>
+    <div class="post-nav"><a href="/to-use-opensource/" class="prev" rel="prev" title="如何入手一个前端开源项目"><i class="fas fa-angle-left fa-fw"></i>如何入手一个前端开源项目</a>
+            <a href="/covid-19-review/" class="next" rel="next" title="Covid 19 Review">Covid 19 Review<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"></div></article></div>
             </main><footer class="footer">
