@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Vue 集成 Vitest - Quasi IDEA</title><meta name="Description" content="quasi of IDEA"><meta property="og:title" content="Vue 集成 Vitest" />
+<meta property="og:description" content="之前看 CS61B 的时候看到里面的第一个例子就是用 JUnit 来作为检查数据结构和算法有没有写错的验证程序，后来学了 Java 之后才知道 JUnit 是一个单元测试包，专门用来测试" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zheng-shugan.github.io/vue-vitest-test/" /><meta property="og:image" content="https://zheng-shugan.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-17T19:10:20+08:00" />
+<meta property="article:modified_time" content="2023-01-17T19:10:20+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://zheng-shugan.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Vue 集成 Vitest"/>
+<meta name="twitter:description" content="之前看 CS61B 的时候看到里面的第一个例子就是用 JUnit 来作为检查数据结构和算法有没有写错的验证程序，后来学了 Java 之后才知道 JUnit 是一个单元测试包，专门用来测试"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://zheng-shugan.github.io/vue-vitest-test/" /><link rel="prev" href="https://zheng-shugan.github.io/covid-19-review/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Vue 集成 Vitest",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/zheng-shugan.github.io\/vue-vitest-test\/"
+        },"genre": "posts","wordcount":  1360 ,
+        "url": "https:\/\/zheng-shugan.github.io\/vue-vitest-test\/","datePublished": "2023-01-17T19:10:20+08:00","dateModified": "2023-01-17T19:10:20+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "zhengshugan"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Quasi IDEA"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/atom.png"
+        data-srcset="/atom.png, /atom.png 1.5x, /atom.png 2x"
+        data-sizes="auto"
+        alt="/atom.png"
+        title="/atom.png" />Quasi of IDEAs</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Quasi IDEA"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/atom.png"
+        data-srcset="/atom.png, /atom.png 1.5x, /atom.png 2x"
+        data-sizes="auto"
+        alt="/atom.png"
+        title="/atom.png" />Quasi of IDEAs</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Vue 集成 Vitest</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>zhengshugan</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-17">2023-01-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1360 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#为什么不能没有单元测试">为什么不能没有单元测试</a></li>
+        <li><a href="#为什么会是-vitest">为什么会是 Vitest</a></li>
+        <li><a href="#准备工作">准备工作</a>
+          <ul>
+            <li><a href="#安装依赖">安装依赖</a></li>
+            <li><a href="#修改配置文件">修改配置文件</a></li>
+            <li><a href="#要测试什么">要测试什么？</a></li>
+          </ul>
+        </li>
+        <li><a href="#开始测试">开始测试！</a>
+          <ul>
+            <li><a href="#创建测试文件">创建测试文件</a></li>
+            <li><a href="#创建一个测试">创建一个测试</a></li>
+            <li><a href="#验证程序">验证程序</a></li>
+            <li><a href="#完整测试程序">完整测试程序</a></li>
+          </ul>
+        </li>
+        <li><a href="#useful-link">Useful Link</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>之前看 CS61B 的时候看到里面的第一个例子就是用 JUnit 来作为检查数据结构和算法有没有写错的验证程序，后来学了 Java 之后才知道 JUnit 是一个单元测试包，专门用来测试一些函数是否能得到预期的结果。但在学习 Web 前端的时候就一直没有看到过有教程或者是学习路线中有提到前端开发的单元测试要怎么写。</p>
+<h3 id="为什么不能没有单元测试">为什么不能没有单元测试</h3>
+<p>单元测试的目的很简单，就是为了验证代码能不能按照编写的预期工作的，如果在写完一个函数就进行单元测试并通过就能更快的将问题排查出来，而不是等到项目运行的时候才去排错。
+插一句不太相关的话，在平时的项目用 TypeScript 来替换 JavaScript 的一个很大原因就是希望将一些错误留在编译期间而不是项目运行时。</p>
+<h3 id="为什么会是-vitest">为什么会是 Vitest</h3>
+<p>很简单，因为 vitest 的核心成员有 vue 和 vite 的核心成员，所以 vite 项目里集成 vitest 只要把 <code>vite.config.ts</code> 改成 <code>vitest.config.ts</code> 就可以将 vitest 引入已有的 vite 工程当中。</p>
+<h3 id="准备工作">准备工作</h3>
+<h4 id="安装依赖">安装依赖</h4>
+<p>要在 vue 项目中加入 vitest 先要下载依赖：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pnpm add @vue/test-utils jsdom vitest -D
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>@vue/test-utils</code> 是官方的测试工具库，<code>jsdom</code> 是拿去模拟 DOM 的，vitest 作为单元测试。</p>
+<h4 id="修改配置文件">修改配置文件</h4>
+<p>vitest 是原生的 vite 框架集成起来是非常容易的，只需要替换一个配置就可以完成在 vitest 的集成。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="cm">/* 将 vite 的 defineConfig 换成 vitest/config 的 defineConfig */</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">defineConfig</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;vitest/config&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// https://vitejs.dev/config/  
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="nx">defineConfig</span><span class="p">({</span>  
+</span></span><span class="line"><span class="cl">  <span class="c1">// 其他配置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">test</span><span class="o">:</span> <span class="p">{</span>  
+</span></span><span class="line"><span class="cl">    <span class="nx">environment</span><span class="o">:</span> <span class="s1">&#39;jsdom&#39;</span><span class="p">,</span> <span class="c1">// 指定虚拟 DOM 环境
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">},</span>  
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="要测试什么">要测试什么？</h4>
+<p>在测试之前我们需要知道希望某个组件预期会有什么效果。我准备的测试需要检查以下内容</p>
+<ul>
+<li>Hello 组件根据 DOM 渲染出一对 <code>&lt;h1&gt;&lt;/h1&gt;</code> 标签</li>
+<li>标签内部是否有文本 <code>Hello Vitest</code></li>
+</ul>
+<p>Hello 组件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#39;ts&#39;</span> <span class="na">setup</span><span class="p">&gt;</span>  <span class="p">&lt;</span><span class="nt">script</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#39;ts&#39;</span> <span class="na">setup</span><span class="p">&gt;</span>  
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">props</span> <span class="o">=</span> <span class="nx">withDefaults</span><span class="p">(</span><span class="nx">defineProps</span><span class="o">&lt;</span><span class="p">{</span> <span class="nx">msg</span><span class="o">:</span> <span class="nx">string</span> <span class="p">}</span><span class="o">&gt;</span><span class="p">(),</span> <span class="p">{</span>  
+</span></span><span class="line"><span class="cl">  <span class="nx">msg</span><span class="o">:</span> <span class="s1">&#39;Hello Vue&#39;</span><span class="p">,</span>  
+</span></span><span class="line"><span class="cl"><span class="p">})</span>  
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>  
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;{{</span> <span class="nx">msg</span> <span class="p">}}&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>  
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="开始测试">开始测试！</h3>
+<h4 id="创建测试文件">创建测试文件</h4>
+<p>现创建一个 <code>__test__</code> 的文件夹专门用于存放测试文件，然后在此文件夹里创建一个 <code>Hello.test.ts</code> 的测试文件。</p>
+<h4 id="创建一个测试">创建一个测试</h4>
+<p>可以通过引入 vitest 里的 <code>descript</code> 函数来创建一个测试组，它接收一个字符串作为测试组的名字和一个函数进行测试。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Hello.vue&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 需要测试的代码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在 <code>descript</code> 的回调函数中我们可以使用 vitest 的 <code>test</code> 来创建一个测试函数，同样的它也接受一个字符串作为测试的名字和一个回调函数。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Hello.vue&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;mount component&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 需要测试的代码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>但在开始测试之前我们必须拿到需要测试的组件，我们可以通过 @vue/test-utils 里的 <code>mount</code> 函数做到这一点，它接收一个 Vue 组件和一些可选配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="cm">/**  
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * 创建一个 wrapper 包含需要渲染的组件
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param Component 需要测试的组件  
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * @param options   可选项配置  
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">mount</span><span class="p">(</span><span class="nx">Component</span><span class="p">,</span> <span class="nx">options?</span>: <span class="kt">MountingOptions</span><span class="p">)</span><span class="o">:</span> <span class="nx">VueWrapper</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">interface</span> <span class="nx">MountingOptions</span><span class="p">&lt;</span><span class="nt">Props</span><span class="err">,</span> <span class="na">Data </span><span class="o">=</span> <span class="p">{}&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">attachTo?</span>: <span class="kt">HTMLElement</span> <span class="o">|</span> <span class="kt">string</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">attrs?</span>: <span class="kt">Record</span><span class="p">&lt;</span><span class="nt">string</span><span class="err">,</span> <span class="na">unknown</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">data</span><span class="o">?:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{}</span> <span class="kr">extends</span> <span class="nx">Data</span> <span class="o">?</span> <span class="kt">any</span> <span class="o">:</span> <span class="nx">Data</span> <span class="kr">extends</span> <span class="kt">object</span> <span class="o">?</span> <span class="nx">Partial</span><span class="p">&lt;</span><span class="nt">Data</span><span class="p">&gt;</span> <span class="o">:</span> <span class="kt">any</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">props</span><span class="o">?:</span> <span class="p">(</span><span class="nx">RawProps</span> <span class="o">&amp;</span> <span class="nx">Props</span><span class="p">)</span> <span class="o">|</span> <span class="p">({}</span> <span class="kr">extends</span> <span class="nx">Props</span> <span class="o">?</span> <span class="kc">null</span> <span class="o">:</span> <span class="kt">never</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">slots</span><span class="o">?:</span> <span class="p">{</span> <span class="p">[</span><span class="nx">key</span>: <span class="kt">string</span><span class="p">]</span><span class="o">:</span> <span class="nx">Slot</span> <span class="p">}</span> <span class="o">&amp;</span> <span class="p">{</span> <span class="k">default</span><span class="o">?:</span> <span class="nx">Slot</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">global</span><span class="o">?:</span> <span class="nx">GlobalMountOptions</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">shallow?</span>: <span class="kt">boolean</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我们可以在 <code>test</code> 中拿到这个需要的组件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Hello.vue&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Hello.vue&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;mount component&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 通过 mount 拿到一个包含 Hello 组件的 wrapper
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">wrapper</span> <span class="o">=</span> <span class="nx">mount</span><span class="p">(</span><span class="nx">Hello</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 传入 Hello 组件的 props
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">props</span><span class="o">:</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">        <span class="nx">msg</span><span class="o">:</span> <span class="s1">&#39;Hello Vitest&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="验证程序">验证程序</h4>
+<p>到目前为止我们已经创建好测试文件和拿到需要渲染的组件，接下来就是验证组件有没有按我们预期进行渲染。
+现在就可以使用 vitest 中的 <code>except</code> 来验证组件的某些部分是否和我们预期的相同。现在 Hello 组件应该是只会显示标题 1 且文本为 <code>Hello Vitest</code>，所以我们可以这样做：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">expectMsg</span> <span class="o">=</span> <span class="s1">&#39;Hello Vitest&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// wrapper.find() 来查找组件中的一个 HTML 标签
+</span></span></span><span class="line"><span class="cl"><span class="c1">// wrapper.text() 返回一个元素的文本
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">expect</span><span class="p">(</span><span class="nx">wrapper</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">()).</span><span class="nx">toContain</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>到这一步我们的测试文件就写完啦，可以在终端里运行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pnpm run <span class="nb">test</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这样就完成了在 vue 中集成 vitest。</p>
+<h4 id="完整测试程序">完整测试程序</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">describe</span><span class="p">,</span> <span class="nx">expect</span><span class="p">,</span> <span class="nx">test</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;vitest&#39;</span>  
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">mount</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@vue/test-utils&#39;</span>  
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Hello</span> <span class="kr">from</span> <span class="s1">&#39;@/components/Hello.vue&#39;</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Hello.vue&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>  
+</span></span><span class="line"><span class="cl">  <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;mount component&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>  
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">msg</span> <span class="o">=</span> <span class="s1">&#39;Hello Vue &amp; Vitest&#39;</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">wrapper</span> <span class="o">=</span> <span class="nx">mount</span><span class="p">(</span><span class="nx">Hello</span><span class="p">,</span> <span class="p">{</span>  
+</span></span><span class="line"><span class="cl">      <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>  
+</span></span><span class="line"><span class="cl">        <span class="nx">msg</span><span class="o">:</span> <span class="s1">&#39;Hello Vue &amp; Vitest&#39;</span><span class="p">,</span>  
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>  
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="nx">expect</span><span class="p">(</span><span class="nx">wrapper</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">()).</span><span class="nx">toContain</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span>  
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>  
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="useful-link">Useful Link</h3>
+<ul>
+<li><a href="https://cn.vitest.dev/" target="_blank" rel="noopener noreffer">Vitest | 由 Vite 提供支持的极速单元测试框架</a></li>
+<li><a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener noreffer">Home | Vue Test Utils (vuejs.org)</a></li>
+<li><a href="https://github.com/zheng-shugan/vue-starter" target="_blank" rel="noopener noreffer">测试代码</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-01-17</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/covid-19-review/" class="prev" rel="prev" title="Covid 19 Review"><i class="fas fa-angle-left fa-fw"></i>Covid 19 Review</a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.104.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">zhengshugan</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":1000},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
