@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/zheng-shugan.github.io\/vue-vitest-test\/"
-        },"genre": "posts","wordcount":  1360 ,
+        },"genre": "posts","wordcount":  1347 ,
         "url": "https:\/\/zheng-shugan.github.io\/vue-vitest-test\/","datePublished": "2023-01-17T19:10:20+08:00","dateModified": "2023-01-17T19:10:20+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -120,7 +120,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Vue 集成 Vitest</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>zhengshugan</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-17">2023-01-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1360 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-01-17">2023-01-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1347 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -158,7 +158,7 @@
 <p>单元测试的目的很简单，就是为了验证代码能不能按照编写的预期工作的，如果在写完一个函数就进行单元测试并通过就能更快的将问题排查出来，而不是等到项目运行的时候才去排错。
 插一句不太相关的话，在平时的项目用 TypeScript 来替换 JavaScript 的一个很大原因就是希望将一些错误留在编译期间而不是项目运行时。</p>
 <h3 id="为什么会是-vitest">为什么会是 Vitest</h3>
-<p>很简单，因为 vitest 的核心成员有 vue 和 vite 的核心成员，所以 vite 项目里集成 vitest 只要把 <code>vite.config.ts</code> 改成 <code>vitest.config.ts</code> 就可以将 vitest 引入已有的 vite 工程当中。</p>
+<p>很简单，因为 vitest 的核心成员有 vue 和 vite 的核心成员，所以 vite 项目里集成 vitest 只要改动 <code>vite.config.ts</code> 里的几行配置就可以啦。</p>
 <h3 id="准备工作">准备工作</h3>
 <h4 id="安装依赖">安装依赖</h4>
 <p>要在 vue 项目中加入 vitest 先要下载依赖：</p>
@@ -172,7 +172,7 @@
 </div>
 </div><p><code>@vue/test-utils</code> 是官方的测试工具库，<code>jsdom</code> 是拿去模拟 DOM 的，vitest 作为单元测试。</p>
 <h4 id="修改配置文件">修改配置文件</h4>
-<p>vitest 是原生的 vite 框架集成起来是非常容易的，只需要替换一个配置就可以完成在 vitest 的集成。</p>
+<p>只需要将 <code>defineConfig</code> 换成从 <code>vitest/config</code> 引入，然后再添加一个 <code>test</code> 属性指定测试的 DOM 环境即可。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -203,7 +203,7 @@
 <p>在测试之前我们需要知道希望某个组件预期会有什么效果。我准备的测试需要检查以下内容</p>
 <ul>
 <li>Hello 组件根据 DOM 渲染出一对 <code>&lt;h1&gt;&lt;/h1&gt;</code> 标签</li>
-<li>标签内部是否有文本 <code>Hello Vitest</code></li>
+<li>标签内部是否有文本 <code>Hello vue</code></li>
 </ul>
 <p>Hello 组件</p>
 <div class="highlight"><div class="chroma">
