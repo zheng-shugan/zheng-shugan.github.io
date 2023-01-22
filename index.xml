@@ -3,9 +3,16 @@
         <title>Quasi IDEA</title>
         <link>https://zheng-shugan.github.io/</link>
         <description>quasi of IDEA</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 17 Jan 2023 19:10:20 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 22 Jan 2023 22:10:18 &#43;0800</lastBuildDate>
             <atom:link href="https://zheng-shugan.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>2022年度关键词</title>
+    <link>https://zheng-shugan.github.io/fly-to-2023/</link>
+    <pubDate>Sun, 22 Jan 2023 22:10:18 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://zheng-shugan.github.io/fly-to-2023/</guid>
+    <description><![CDATA[人人都有保护自己和追求幸福的权力 生活 关键词：一坨💩 为什么说 2022 年我的生活是一坨屎呢？因为在这一年里看见了太多奇葩事情 女朋友因为被不能表示健康状]]></description>
+</item><item>
     <title>Vue 集成 Vitest</title>
     <link>https://zheng-shugan.github.io/vue-vitest-test/</link>
     <pubDate>Tue, 17 Jan 2023 19:10:20 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://zheng-shugan.github.io/mockdata/</guid>
     <description><![CDATA[从前后端分离开发说起 都说前后端开发要分离，而前后端分离的重点就是前后端独立可运行，那在后端接口没有返回数据的情况下来完成前端数据的获取呢？答]]></description>
-</item><item>
-    <title>React With TS</title>
-    <link>https://zheng-shugan.github.io/reactwithts/</link>
-    <pubDate>Tue, 28 Jun 2022 12:55:53 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://zheng-shugan.github.io/reactwithts/</guid>
-    <description><![CDATA[为什么要使用 TypeScript？ JS（JavaScript）是一门功能强大的语言，但是作为一门动态类型语言有时候简直是在浪费 IDE 强大的补全功]]></description>
 </item></channel>
 </rss>

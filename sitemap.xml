@@ -2,8 +2,9 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://zheng-shugan.github.io/posts/</loc><lastmod>2023-01-17T19:10:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://zheng-shugan.github.io/</loc><lastmod>2023-01-17T19:10:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://zheng-shugan.github.io/fly-to-2023/</loc><lastmod>2023-01-22T22:10:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://zheng-shugan.github.io/posts/</loc><lastmod>2023-01-22T22:10:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://zheng-shugan.github.io/</loc><lastmod>2023-01-22T22:10:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://zheng-shugan.github.io/vue-vitest-test/</loc><lastmod>2023-01-17T19:10:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://zheng-shugan.github.io/covid-19-review/</loc><lastmod>2022-12-27T22:19:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
             <loc>https://zheng-shugan.github.io/toolchain-source-config/</loc><lastmod>2022-11-30T22:42:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
