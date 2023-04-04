@@ -3,7 +3,14 @@
         <title>所有文章 - Quasi IDEA</title>
         <link>https://zheng-shugan.github.io/posts/</link>
         <description>所有文章 | Quasi IDEA</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 22 Jan 2023 22:10:18 &#43;0800</lastBuildDate><atom:link href="https://zheng-shugan.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 04 Apr 2023 16:46:36 &#43;0800</lastBuildDate><atom:link href="https://zheng-shugan.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>AI 是怎么解放生产力的</title>
+    <link>https://zheng-shugan.github.io/alt-ai/</link>
+    <pubDate>Tue, 04 Apr 2023 16:46:36 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://zheng-shugan.github.io/alt-ai/</guid>
+    <description><![CDATA[最近都在准备升学方面的东西，越来越觉得 AI 可以代替我了。 因为我背书是不可能会背的过 AI 的。 不论如何，我们不应该再去重复那些 ChatGPT 或者是其他 AI 能够完成]]></description>
+</item><item>
     <title>2022年度关键词</title>
     <link>https://zheng-shugan.github.io/fly-to-2023/</link>
     <pubDate>Sun, 22 Jan 2023 22:10:18 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://zheng-shugan.github.io/aboutconst/</guid>
     <description><![CDATA[const 是为了解决什么问题？ 有时候我们希望定义这样一种变量，它的值不能被改变。例如，用一个变量来表示缓冲区的大小。使用变量的好处是当我们觉得缓冲区]]></description>
-</item><item>
-    <title>Mock 数据</title>
-    <link>https://zheng-shugan.github.io/mockdata/</link>
-    <pubDate>Fri, 22 Jul 2022 16:28:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://zheng-shugan.github.io/mockdata/</guid>
-    <description><![CDATA[从前后端分离开发说起 都说前后端开发要分离，而前后端分离的重点就是前后端独立可运行，那在后端接口没有返回数据的情况下来完成前端数据的获取呢？答]]></description>
 </item></channel>
 </rss>
