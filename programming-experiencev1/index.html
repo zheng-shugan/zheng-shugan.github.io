@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title> - Quasi IDEA</title><meta name="Description" content="quasi of IDEA"><meta property="og:title" content="" />
+<meta property="og:description" content="很难忘记在学第一门编程语言配置环境时候狼狈的样子：又是下载 GCC 又是配置环境变量的，等到终于学完语法基础了，工程化的时候依赖/包管理又是一件很烦" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zheng-shugan.github.io/programming-experiencev1/" /><meta property="og:image" content="https://zheng-shugan.github.io/logo.png"/><meta property="article:section" content="posts" />
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://zheng-shugan.github.io/logo.png"/>
+
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="很难忘记在学第一门编程语言配置环境时候狼狈的样子：又是下载 GCC 又是配置环境变量的，等到终于学完语法基础了，工程化的时候依赖/包管理又是一件很烦"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://zheng-shugan.github.io/programming-experiencev1/" /><link rel="next" href="https://zheng-shugan.github.io/helloworld/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/zheng-shugan.github.io\/programming-experiencev1\/"
+        },"genre": "posts","wordcount":  1383 ,
+        "url": "https:\/\/zheng-shugan.github.io\/programming-experiencev1\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "zhengshugan"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Quasi IDEA"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/atom.png"
+        data-srcset="/atom.png, /atom.png 1.5x, /atom.png 2x"
+        data-sizes="auto"
+        alt="/atom.png"
+        title="/atom.png" />Quasi of IDEAs</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Quasi IDEA"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/atom.png"
+        data-srcset="/atom.png, /atom.png 1.5x, /atom.png 2x"
+        data-sizes="auto"
+        alt="/atom.png"
+        title="/atom.png" />Quasi of IDEAs</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>zhengshugan</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1383 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#代码规范">代码规范</a></li>
+    <li><a href="#javasctipt">JavaSctipt</a></li>
+    <li><a href="#typescript">TypeScript</a></li>
+    <li><a href="#git">Git</a></li>
+    <li><a href="#包管理工具">包管理工具</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>很难忘记在学第一门编程语言配置环境时候狼狈的样子：又是下载 GCC 又是配置环境变量的，等到终于学完语法基础了，工程化的时候依赖/包管理又是一件很烦的事情。</p>
+<p>大学三年了，对学习编程语言也有一些经验了。大概就是</p>
+<ul>
+<li>用系统包管理器安装环境</li>
+<li>配置环境变量</li>
+<li>掌握依赖/包管理</li>
+</ul>
+<p>在这也说说学编程语言以来的几个经验</p>
+<h2 id="代码规范">代码规范</h2>
+<p>不知道为什么很多网课和教程都不讲各种语言的代码规范，但这是写代码中很重要的一部分，在学完一门编程语言的顺序结构、分支结构、循环结构和函数之后就可以开始把代码规范引入了。</p>
+<p>如果是学第二门编程语言建议一开始就去了解一下某个语言的代码规范是怎么样的，这样保证了在自己的项目里写的代码不至于一下就忘记是拿去干什么用的。</p>
+<h2 id="javasctipt">JavaSctipt</h2>
+<p>学习 JavaScript 只推荐两本书和一个网站：《DOM 编程艺术》和《你不知道的 JavaScript》，和 MDN 的 JavaScript 文档。</p>
+<p>学习 JavaScript 一定不能离开 DOM，现代所有前端框架都是以 DOM 为基础来构建的，很多人说自己的 JS 基础不好很大一部分原因就是因为没有好好了解 DOM。</p>
+<p>《你不知道的 JavaScript》里很好的描述了如何避免 JS 的垃圾设计带来额外的心智负担，也是这本书让我看见了 JS 是多么的丑陋。</p>
+<p>可以吧 MDN 理解成一本《JavaScript 高级程序设计》和《JavaScript 权威指南》的网页版。虽然在内容的顺序上有些不太一样，但三者的特点都是 JavaScript 的百科指南，可以当作工具书来用是非常好用的。</p>
+<p>代码规范这个的东西一定要从开始学代码就开始养成，特别是对于 JavaScript 这样动态弱类型的语言，没有一个严格的代码规范很容易写完代码过一周就不知道自己写的是什么了。</p>
+<h2 id="typescript">TypeScript</h2>
+<p>TypeScript 的类型系统真是是强大但复杂，想要写出好的 TypeScript 类型还是比较麻烦的，很考验类型体操的能力。</p>
+<p>比如</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="p">&lt;</span><span class="nt">T</span> <span class="na">extends</span> <span class="na">any</span><span class="p">&gt;(</span><span class="nx">n</span>: <span class="kt">T</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">foo</span><span class="p">(</span><span class="s1">&#39;Hello TypeScript&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>和</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">bar</span> <span class="o">=</span> <span class="p">(</span><span class="nx">n</span>: <span class="kt">any</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">bar</span><span class="p">(</span><span class="s1">&#39;Hello TypeScript&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这两个函数乍一看感觉是一模一样的，但第一个的 IDE 提示要远比第二个要好的多。</p>
+<p>作为全栈开发这你可以用 <code>nestjs</code> 来做后端，支持 TypeScript 的前端框架那更是数不胜数，如果你的精力有限又想做自己的产品，TypeScript 会是一个很好的选择。</p>
+<p>但不要指望用了 TypeScript 就可以不要写代码文档了，代码好不好维护很多时候和语言没有什么关系，更多的是在于写代码的人的规范是怎么样的。</p>
+<h2 id="git">Git</h2>
+<p>git 可以说是最劝退新人的一个工具了：不熟悉的命令行操作、网络环境、环境配置。这些问题很容易就能把一个小白给直接劝退了。</p>
+<p>在个人项目里用 git 最大的好处就是备份文件了，只要多多 <code>commit</code> 基本不用担心不小心把文件删了该怎么办、多写了几行代码项目突然不能运行了不会回滚的惨剧。</p>
+<h2 id="包管理工具">包管理工具</h2>
+<p>不管你是想做前端还是后端开发，等到学习项目工程化的时候包管理工具是不可避免要接触的。包管理工具就是让我们更加方便的去使用别人已经写好的代码，只要敲几行命令、配置一下文件就能下载到别人发布的代码。</p>
+<p>比如 Java 的 <code>maven</code> 和 <code>gradle</code>，JavaScript 的 <code>npm</code> 还有 Python 的 <code>pip</code> 等等。</p>
+<p>但更方便的是用系统的包管理工具，大部分编程环境的依赖下载好的同时就能帮我们把环境变量给配置好，简直是一举两得啊，我忘不了在第一次学 C 去配置 GCC 环境在各种配置里跳来跳去的惨剧啊&hellip;&hellip;</p>
+<p>在这也推荐几个常用的包管理工具
+macOS：homebrew
+Windows：chocolatey</p>
+<p>各个 Linux 的发行版都有自己的包管理工具，用官方自带的就可以了。</p>
+<p>想要方便的使用记得一定要换一个国内的镜像源，或者是配置一下系统终端的科学上网代理。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 0001-01-01</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/helloworld/" class="next" rel="next" title="Hello world">Hello world<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">zhengshugan</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":1000},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
