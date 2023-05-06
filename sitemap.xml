@@ -2,10 +2,11 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://zheng-shugan.github.io/posts/</loc><lastmod>2023-04-08T10:30:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://zheng-shugan.github.io/</loc><lastmod>2023-04-08T10:30:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://zheng-shugan.github.io/programming-experiencev1/</loc><lastmod>2023-04-08T10:30:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://zheng-shugan.github.io/alt-ai/</loc><lastmod>2023-04-04T16:46:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://zheng-shugan.github.io/posts/</loc><lastmod>2023-05-06T19:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://zheng-shugan.github.io/</loc><lastmod>2023-05-06T19:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://zheng-shugan.github.io/why-not-function/</loc><lastmod>2023-05-06T19:52:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://zheng-shugan.github.io/programming-experiencev1/</loc><lastmod>2023-04-08T10:30:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://zheng-shugan.github.io/alt-ai/</loc><lastmod>2023-04-04T16:46:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
             <loc>https://zheng-shugan.github.io/fly-to-2023/</loc><lastmod>2023-01-22T22:10:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://zheng-shugan.github.io/vue-vitest-test/</loc><lastmod>2023-01-17T19:10:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://zheng-shugan.github.io/covid-19-review/</loc><lastmod>2022-12-27T22:19:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

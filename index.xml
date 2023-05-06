@@ -3,9 +3,16 @@
         <title>Quasi IDEA</title>
         <link>https://zheng-shugan.github.io/</link>
         <description>quasi of IDEA</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 08 Apr 2023 10:30:35 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 06 May 2023 19:52:47 &#43;0800</lastBuildDate>
             <atom:link href="https://zheng-shugan.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>放弃function保留字</title>
+    <link>https://zheng-shugan.github.io/why-not-function/</link>
+    <pubDate>Sat, 06 May 2023 19:52:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://zheng-shugan.github.io/why-not-function/</guid>
+    <description><![CDATA[JavaScript 里面的函数是我学过的编程语言里面最奇葩的一个，没有之一超第二很远。 写一个函数去操作数据就是为了方便和可复用，但 JavaScript 的 function 保留字定义的函数让我感]]></description>
+</item><item>
     <title>编程经验 v1.0</title>
     <link>https://zheng-shugan.github.io/programming-experiencev1/</link>
     <pubDate>Sat, 08 Apr 2023 10:30:35 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://zheng-shugan.github.io/aboutlearnnewprogramminglang/</guid>
     <description><![CDATA[只要掌握编程语言中某一种某种思想，其实对于掌握其他的编程语言就已经打下了十分牢固的基础。但配置编程语言环境不是啊～ 幸运的是我学的第一门编程语]]></description>
-</item><item>
-    <title>第一门编程语言学什么好？</title>
-    <link>https://zheng-shugan.github.io/aboutprogramminglanguage/</link>
-    <pubDate>Wed, 31 Aug 2022 21:00:06 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://zheng-shugan.github.io/aboutprogramminglanguage/</guid>
-    <description><![CDATA[0基础想自学编程，不知道学前端还是后端还是其他，也不知道学哪种编程语言? 未来几年最有前景的三门编程语言是什么？ 大学生想学编程，想了解下pyt]]></description>
 </item></channel>
 </rss>
