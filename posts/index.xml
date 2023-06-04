@@ -3,7 +3,14 @@
         <title>所有文章 - Quasi IDEA</title>
         <link>https://zheng-shugan.github.io/posts/</link>
         <description>所有文章 | Quasi IDEA</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 06 May 2023 19:52:47 &#43;0800</lastBuildDate><atom:link href="https://zheng-shugan.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 04 Jun 2023 19:23:00 &#43;0800</lastBuildDate><atom:link href="https://zheng-shugan.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>怎么样才算一个好的项目</title>
+    <link>https://zheng-shugan.github.io/good-projects/</link>
+    <pubDate>Sun, 04 Jun 2023 19:23:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://zheng-shugan.github.io/good-projects/</guid>
+    <description><![CDATA[Intro 如果说大学是教人掌握知识的地方那么 B 站可以说是中国最普适学生最多的学校了，一个没有广告、各个学科的课程都有的地方很难让人不接受。我的编程就]]></description>
+</item><item>
     <title>放弃function保留字</title>
     <link>https://zheng-shugan.github.io/why-not-function/</link>
     <pubDate>Sat, 06 May 2023 19:52:47 &#43;0800</pubDate>
@@ -66,12 +73,5 @@
     <author>作者</author>
     <guid>https://zheng-shugan.github.io/your-mind-palace/</guid>
     <description><![CDATA[个人知识库搭建 为什么要搭建个人知识库 方便复习 方便分享 搭建知识库的需求 支持 Markdown 语法 云同步 好看 思维导图 流程图 没有广告 怎么搭建 写作软件 个人博客 总结 下]]></description>
-</item><item>
-    <title>关于新学一门编程语言的痛</title>
-    <link>https://zheng-shugan.github.io/aboutlearnnewprogramminglang/</link>
-    <pubDate>Tue, 13 Sep 2022 21:16:19 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://zheng-shugan.github.io/aboutlearnnewprogramminglang/</guid>
-    <description><![CDATA[只要掌握编程语言中某一种某种思想，其实对于掌握其他的编程语言就已经打下了十分牢固的基础。但配置编程语言环境不是啊～ 幸运的是我学的第一门编程语]]></description>
 </item></channel>
 </rss>
