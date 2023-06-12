@@ -3,9 +3,16 @@
         <title>Quasi IDEA</title>
         <link>https://zheng-shugan.github.io/</link>
         <description>quasi of IDEA</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 04 Jun 2023 19:23:00 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 12 Jun 2023 21:10:01 &#43;0800</lastBuildDate>
             <atom:link href="https://zheng-shugan.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>好好对待你的毕业设计</title>
+    <link>https://zheng-shugan.github.io/about-graduation-project/</link>
+    <pubDate>Mon, 12 Jun 2023 21:10:01 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://zheng-shugan.github.io/about-graduation-project/</guid>
+    <description><![CDATA[专科、计算机，可以说是在招聘的时候叠满了 debuff，只要本科的公司已读不回要专科的基本都是未读，好不容易有几个面试邀请也还都是外包公司，好]]></description>
+</item><item>
     <title>怎么样才算一个好的项目</title>
     <link>https://zheng-shugan.github.io/good-projects/</link>
     <pubDate>Sun, 04 Jun 2023 19:23:00 &#43;0800</pubDate>
@@ -68,12 +75,5 @@
     <author>作者</author>
     <guid>https://zheng-shugan.github.io/to-use-opensource/</guid>
     <description><![CDATA[如何入手一个开源项目 克隆到本地 安装依赖 pnpm yarn npm 看 package.json 主要看 script 和 dependencies 部分 从 App 组件入手，逐级往下看 为什么要找开源项目 很多人在学完基础想要找项目的时候就]]></description>
-</item><item>
-    <title>聊聊我是如何搭建个人知识库的</title>
-    <link>https://zheng-shugan.github.io/your-mind-palace/</link>
-    <pubDate>Wed, 05 Oct 2022 22:11:34 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://zheng-shugan.github.io/your-mind-palace/</guid>
-    <description><![CDATA[个人知识库搭建 为什么要搭建个人知识库 方便复习 方便分享 搭建知识库的需求 支持 Markdown 语法 云同步 好看 思维导图 流程图 没有广告 怎么搭建 写作软件 个人博客 总结 下]]></description>
 </item></channel>
 </rss>
