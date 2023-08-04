@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/zheng-shugan.github.io\/first-language\/"
-        },"genre": "posts","wordcount":  1332 ,
+        },"genre": "posts","wordcount":  922 ,
         "url": "https:\/\/zheng-shugan.github.io\/first-language\/","datePublished": "2022-08-31T21:00:06+08:00","dateModified": "2022-08-31T21:00:06+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -119,8 +119,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">第一门编程语言学什么好？</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>zhengshugan</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-08-31">2022-08-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1332 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-08-31">2022-08-31</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 922 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
@@ -128,14 +128,9 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#第一门编程语言要学-cc-吗">第一门编程语言要学 C/C++ 吗？</a></li>
-        <li><a href="#弱类型-vs-强类型">弱类型 VS. 强类型</a></li>
-        <li><a href="#动态语言-vs-静态类型">动态语言 VS. 静态类型</a></li>
-        <li><a href="#一些小感悟">一些小感悟</a></li>
-      </ul>
-    </li>
+    <li><a href="#第一门编程语言要学-cc-吗">第一门编程语言要学 C/C++ 吗？</a></li>
+    <li><a href="#重要的是编程思想和底层原理">重要的是编程思想和底层原理？</a></li>
+    <li><a href="#如何面向工作编程">如何面向工作编程？</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
@@ -151,69 +146,21 @@
 <p>自学计算机该先从什么开始？如何自学？入门推荐学什么语言？</p>
 </blockquote>
 <p>在知乎看了一些计算机方面相关的内容之后，就能很容易的看到这些关于选择学什么编程语言好的话题/提问。刚开始接触编程的时候我也遇到过这样的问题，刚好最近开始学习 Ruby 借这个机会来说一下我对如何选择编程语言的看法。</p>
-<h3 id="第一门编程语言要学-cc-吗">第一门编程语言要学 C/C++ 吗？</h3>
+<h2 id="第一门编程语言要学-cc-吗">第一门编程语言要学 C/C++ 吗？</h2>
 <p>在知乎问”如何选择编程语言“下经常都能看到：</p>
 <blockquote>
 <p>建议先学 C/C++，之后再去学别的编程语言就会更轻松</p>
 </blockquote>
-<p>事实其实也就是这样的，但学完 Python 再去学其他编程语言也会变得更轻松，只要能够了解到编程的本质是通过函数来操作数据，无论第一门编程语言学的是什么再去学别的编程语言都会轻松一些。</p>
-<p><strong>第一门编程语言也并非要学 C 语言或者 C++，学任何一门现在流行的编程语言都是可以的（Java、C、C++、JavaScript、TypeScript、Python 等等）</strong>。</p>
-<h3 id="弱类型-vs-强类型">弱类型 VS. 强类型</h3>
-<p>动态的语言的代表我想选择 Python 来举例，Python 的变量声明很符合直觉。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Python" data-lang="Python"><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
-</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="s2">&#34;Hello World&#34;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>OK，这样就声明好了两个变量，把一个数字或者一个其他的什么东西让 x 这个字母来代替，我们可以用 x 去代表任何一个东西它只是一个代号。</p>
-<p>其实上面的代码用 Java 来描述也不会更复杂：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">x</span> <span class="o">=</span> <span class="s">&#34;Hello World&#34;</span><span class="o">;</span> <span class="c1">// ooops something eror!
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>发生变化的只有在声明变量的时候多了一个  <code>int</code> 或者是 <code>String</code> 这样的东西，其实也不难理解就是为变量多加了一个类型而已。当也正是因为类型让这段代码出错了。</p>
-<p>Python 是动态类型的编程语言，变量的名称是一个代号，我们通过这个代号去让变量做些什么事情，这个过程我们不在乎代号指代的东西变成了其他的什么东西。</p>
-<p>Java 恰恰相反，如果一个代号已经被别人声明使用过了，我们只能让它去代表差不多的东西（继承），比如一个 <code>long</code> 类型的变量可以存储数字，我们可以让他去代表一个 <code>int</code> 类型的变量这是可以的，但让他去代表一个 <code>String</code> 类型的的就会报错。</p>
-<h3 id="动态语言-vs-静态类型">动态语言 VS. 静态类型</h3>
-<p>世界上最火热的编程语言 JavaScript 就是一门典型的弱类型语言，因为变量的类型可以根据需要来变化：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">// typeof a = number
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">a</span> <span class="o">=</span> <span class="s2">&#34;Hello World&#34;</span> <span class="c1">// typeof a = string
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>常说的弱类型语言的智能提示功能比较差很大一部分原因是在于不知道那段代码会修改了某个变量的类型，极大的影响了开发工具提示功能。</p>
-<p>TypeScript 和 JavaScript 就是一个对立面，如果一个类型是 <code>number</code> 的变量再给他赋一个 <code>string</code> 类型的值编辑器就会马上报错，告诉你这样是不行的。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">// typeof a = number
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">a</span> <span class="o">=</span> <span class="s2">&#34;Hello World&#34;</span> <span class="c1">// ooops error
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>严格的类型匹配也让开发工具的智能提示变得正常起来，再也不需要在一堆没用的方法里找到自己想要的了。</p>
-<p>对我而已，我更喜欢 TypeScript 这样的静态强类型语言，我不介意在每次写代码的时候都写一下类型让我获得更好的开发体验。我用 TypeScript 单纯就是为了获得到更好的代码提示得到更好的开发体验。</p>
-<h3 id="一些小感悟">一些小感悟</h3>
-<p>编程语言里没有银色子弹，需要找工作就学习市场需求量大的编程语言，对某个领域感兴趣就学习“领域专用语言”（DSL，Domain Specific Language），比如使用 Vue 也需要去学习一下 Vue 的模板语法。</p>
-<p>在今天这个时代，选择技术路线是一件关乎升生机的事情，是不存粹也不能存粹的一件事情。我现在的选择就在在<strong>找工作的时候找需求量大的，私下使用自己欣赏的</strong>。</p>
+<p>**事实其实也就是这样的，因为只要你学了一门主流的编程语言再去学别的编程语言都能快很多。**编程的本质是在怎么去操作计算机的数据，不同的领域不同的语言操作起来更方便一些而已。</p>
+<p>所以第一门编程语言不是一定要学 C/C++ 的，在 Python、C/C++、Java、JavaScript 里任选一门学习都是一个很好的开始。</p>
+<h2 id="重要的是编程思想和底层原理">重要的是编程思想和底层原理？</h2>
+<p>可能学编程语言的时候就会有很多人说了：『编程语言不太重要，重要的是编程思想和底层原理』。</p>
+<p>早年我也是很相信这句话的啊，到真的毕业事情不完全是那样的啊。虽然很多编程思想在不同的编程语言都是通用的，但每个领域都会有自己的领域专用语言（DSL，Domain Specific Language）和许多第三方库。</p>
+<p><strong>学编程一定要有一个主要学习的编程语言和领域</strong>，保证自己有一技可以安身立命，然后可以去扩展自己其他领域的能力。比如做游戏引擎有高性能要求的部分一般都会使用 C/C++ 来开发，国内做 Web 后端开发岗位最多的是 Java，Web 前端的主要使用的是 JavaScript、HTML、CSS。</p>
+<h2 id="如何面向工作编程">如何面向工作编程？</h2>
+<p>在今天这个时代，选择技术路线是一件关乎升生计的事情，是不存粹也不能存粹的一件事情。机缘巧合之下专科毕业找到一份 Python 的后端实习工作，接触到更多的 Python 相关的生态：Web 后端、深度学习、数据处理、自动化脚本，这么多 Buff 加成的 Python 真的很难让我再拒绝去学习它。</p>
+<p>虽然 Web 开发我更喜欢 Ruby，但 Ruby 的岗位真的要比 Python 少太多太多了，所以还是学了一个 Django 来作为找 Python 工作的敲门砖。</p>
+<p>现在市场上岗位最多的还是 Java 后端和 Web 前端，学这两个也准没错~</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
